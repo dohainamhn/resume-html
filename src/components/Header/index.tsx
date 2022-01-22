@@ -1,15 +1,27 @@
-import React from 'react'
-import './style.scss'
+import React from "react";
+import "./style.scss";
 interface Props {
-    onClick:()=>void
+  onClick: () => void;
+  switchs: boolean;
 }
 
 export const Header = (props: Props) => {
-   const {onClick} = props;
-    return (
-        <div className='header'>
-            <i className="fas fa-bars header__icon" onClick={onClick}></i>
-            <div className="header__title"><a href="#" className='header__link'>Bac</a></div>
-        </div>
-    )
-}
+  const { onClick, switchs } = props;
+  return (
+    <div
+      className="header"
+      style={switchs ? { color: "#000" } : { color: "#fff" }}
+    >
+      <i className="fas fa-bars header__icon" onClick={onClick}></i>
+      <div className="header__title">
+        <a
+          href="#"
+          className="header__link"
+          style={switchs ? { color: "#000" } : { color: "#fff" }}
+        >
+          Bac
+        </a>
+      </div>
+    </div>
+  );
+};

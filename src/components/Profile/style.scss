@@ -1,13 +1,12 @@
 @import '../../variables.scss';
 .header__wrapper{
     flex:1;
-    transition: transform .5s ease-in;
-    background: $dark_mode;
-    @media only screen and (min-width: $tablet) {
-        max-width: 920px;
-    }
-
-    
+    transition: all .5s ease-in;
+    background: $dark_mode; 
+    @media only screen and (min-width: 1000px){
+      margin-left: 290px;
+        
+    }   
 }
 .header__active{
     transform: translateX(290px);  

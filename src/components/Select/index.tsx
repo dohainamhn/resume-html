@@ -16,11 +16,11 @@ export const Select = (props: Props) => {
   const [language, setLanguage] = useState<string>("");
   useEffect(()=>{
     if(ref.current && !status){
-      ref.current.style.display = "flex";
+      ref.current.style.display = "none";
      
     }
     if(ref.current && status){
-      ref.current.style.display = "none";
+      ref.current.style.display = "flex";
    
     } 
   },[status])
@@ -36,7 +36,6 @@ export const Select = (props: Props) => {
         return <div className="flag" key={index} onClick={()=>{
           setStatus(!status);
           setLanguage(item.value);
-          console.log(item.value.toLowerCase());
           changeLanguage(item.value.toLowerCase());
         }}>
           <i className={item.class}></i>

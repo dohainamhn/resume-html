@@ -1,7 +1,7 @@
 @import '../../variables.scss';
 
 .Home{
-    background: $dark_mode;
+   
     height: 100vh;
     position: relative;
     min-height: 100vh;
@@ -18,7 +18,9 @@
                 font-size: 16px;
                 .text-changing{
                     display: inline-block;
-                    animation: bounc-In 1s ease 0s infinite;
+                    -webkit-animation: bounc-In 2s  2s infinite both; 
+                    animation: bounc-In 2s  2s infinite both;
+                   
                 }
             }
             .social-list-icons{
@@ -85,14 +87,34 @@
       }
 }
 @keyframes bounc-In{
-    0% {
-        opacity: 0;
+    0% { 
+        opacity: 0; 
         transform: scale(.3);
-      }
-      50% {
+     }
+     20% { 
         opacity: 1;
         transform: scale(1.05);
-      }
-      70% { transform: scale(.9); }
-      100% { transform: scale(1); }
+     }
+     40% {
+        transform: scale(.9);
+     }
+     100% {
+        transform: scale(1);
+     }
 }
+@-webkit-keyframes bounc-In {
+    0% {
+       opacity: 0;
+       -webkit-transform: scale(.3);
+    }
+    20% {
+       opacity: 1;
+       -webkit-transform: scale(1.15);
+    }
+    50% {
+       -webkit-transform: scale(.9);
+    }
+    100% {
+       -webkit-transform: scale(1);
+    }
+ }
