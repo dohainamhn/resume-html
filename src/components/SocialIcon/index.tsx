@@ -1,16 +1,20 @@
-import React from 'react'
+import React from "react";
 
 interface Props {
-    iconClass:String
+  iconClass: String;
+  switchs: boolean;
 }
 
 export const SocialIcon = (props: Props) => {
-    const {iconClass} = props;
-    return (
-        <li className='social-icon '>
-            <a href="#" className='social-icon-link'>
-                <i className={`${iconClass}`}></i>
-            </a>
-        </li>
-    )
-}
+  const { iconClass, switchs } = props;
+  return (
+    <li className="social-icon ">
+      <a href="#" className="social-icon-link">
+        <i
+          className={`${iconClass}`}
+          style={switchs ? { color: "#000" } : { color: "#fff" }}
+        ></i>
+      </a>
+    </li>
+  );
+};
